@@ -1,0 +1,6 @@
+<h1>ホテル詳細ページ</h1>
+<p><%= @hotel.name %></p>
+<p><%= @hotel.description %></p>
+<p><%= image_tag(@hotel.picture_url, width: 600) if @hotel.picture.present? %></p>
+<p><%= link_to 'ホテル一覧', hotel_path(@hotel) %></p>
+<p><%= link_to '都道府県一覧', prefecture_hotels_path(@prefecture) %></p>

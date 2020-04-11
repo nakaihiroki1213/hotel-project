@@ -1,0 +1,27 @@
+<h1>レビュー投稿</h1>
+
+<%= form_with(model: [@hotel, @review], local: true) do |form| %>
+<!-- name -->
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :review_name %>
+  </div>
+ <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :review_title %>
+  </div>
+   <div class="field">
+    <%= form.label :evaluation %>
+    <%= form.text_field :evaluation, id: :review_evaluation %>
+  </div>
+ <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :review_body %>
+  </div>
+
+    <%= form.hidden_field :hotel_id %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
